@@ -1,0 +1,4 @@
+CREATE TABLE BREAKFAST (
+    "date_id" INT PRIMARY KEY NOT NULL,
+    "assignee" VARCHAR(255)
+);

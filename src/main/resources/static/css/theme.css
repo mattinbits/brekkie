@@ -1,0 +1,26 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  .row {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom:1px solid rgb(51, 51, 51);
+  }
+
+  .column-cell {
+      min-height: 34px;
+  }
+
+  .btn {
+      min-width: 78px;
+  }
+
+  .date-text {
+      font-weight: bold;
+  }
+
+  .form-control {
+      max-width: 300px;
+  }

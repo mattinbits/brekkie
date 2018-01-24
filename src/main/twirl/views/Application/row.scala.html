@@ -1,0 +1,29 @@
+@import com.nordea.commonplatforms.DAO._
+@import com.nordea.commonplatforms.ViewUtil._
+@(breakfast: Breakfast)
+
+<div class = "row equal">
+    <form method="post">
+        <div id ="row-@breakfast.id" class="col-sm-4 col-md-4"><span class="date-text">@uiDate(breakfast.date)</span></div>
+        @breakfast.assignee match {
+            case Some(a) => {
+                <div class ="col-sm-4 col-md-6">@a</div>
+                <div class ="col-sm-4 col-md-2">
+                    <input type="submit" name="remove" class="btn btn-warning" value="Remove"/>
+                    <input type="hidden" value="remove" name="_action" />
+                    <input type="hidden" value="@breakfast.id" name="id" />
+                </div>
+            }
+            case None => {
+                <div class ="col-sm-4 col-md-6">
+                    <input type="text" class="form-control" name="assignee" placeholder="Your name"/>
+                </div>
+                <div class ="col-sm-4 col-md-2">
+                    <input type="submit" name="add" class="btn btn-success" value="Sign up"/>
+                    <input type="hidden" value="add" name="_action" />
+                    <input type="hidden" value="@breakfast.id" name="id" />
+                </div>
+            }
+        }
+    </form>
+</div>
